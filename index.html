@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>What's going one</h1>
+  <input type="text" id="name" placeholder="Name" value="">
+  <button type="submit" onclick=submitButton()>Submit</button>
+  <h2 id="displayName"></h2>
+</body>
+<script>
+  console.log('hello');
+  // console.log(x);
+  submitButton = ()=>{
+    let nameInputValue= $('#name').val()
+    console.log('submit button called', nameInputValue);
+    displayName(nameInputValue);
+  }
+
+  const displayName = (name) => {
+    document.getElementById('displayName').innerHTML = `<p>Welcome ${name}</p>`;
+  }
+</script>
+
+</html>
